@@ -10,8 +10,8 @@ internal class Tip{
     public double Percent{
         get{return percent;}
         set{
-            if (value > 0) percent = value / 100;
-            else percent = value;
+            if (value < 1) percent = value; // switched conditional around for better readibility
+            else percent = value / 100;
         }
     }
     public Tip(double amount, double percent){
